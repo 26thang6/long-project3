@@ -24,7 +24,7 @@ st.markdown(bg, unsafe_allow_html=True)
 
 restaurant_ids = [971, 178, 183, 184, 192, 193, 195, 196, 198, 987, 973, 953, 778, 948, 941, 917, 868, 858, 339, 840, 829, 794, 786, 1056, 169, 161, 159, 111, 1148]
 random.seed(42)
-suggested_ids = random.sample(restaurant_ids, 10)
+suggested_ids = random.sample(restaurant_ids, 5)
 suggested_ids = sorted(suggested_ids)
 
 df_rev_resam = pd.read_csv('df_rev_resam.csv')
@@ -142,9 +142,9 @@ elif choice == 'Classifying Reviews':
 
 elif choice == 'Restaurant Information':
     st.subheader("Restaurant Information")
-    type = st.radio("", options=["Searching Information", "Comparing Information"])
+    type = st.radio("", options=["Search Information", "Compare Information"])
 
-    if type == "Searching Information":
+    if type == "Search Information":
         st.markdown("###  Input Restaurant ID ###")
 
         suggestion = st.selectbox(
@@ -157,13 +157,13 @@ elif choice == 'Restaurant Information':
         else:
             id = suggestion
 
-        if st.button('Searching'):
+        if st.button('Search'):
             try:
                 analyze_general(df, int(id))
             except ValueError:
                 st.error("Please enter a valid number for the Restaurant ID.")
 
-    if type == "Comparing Information":
+    if type == "Compare Information":
         st.markdown("### Input Restaurant ID ###")
 
         suggestion1 = st.selectbox(
@@ -186,7 +186,7 @@ elif choice == 'Restaurant Information':
         else:
             id2 = suggestion2
 
-        if st.button('Comparing'):
+        if st.button('Compare'):
             try:
                 col1, col2 = st.columns(2)
 
@@ -221,8 +221,8 @@ elif choice == 'About Us':
 
     
     st.write("<br><br><br>", unsafe_allow_html=True)
-
-    st.subheader("Thank You")    
+    
+    st.image('thankyou.png', use_column_width=True)
 
     st.markdown('''
     We would like to thank Ho Chi Minh University Computer Science Center, teachers, especially Ms. Khuat Thuy Phuong and friends for helping us complete this project.
