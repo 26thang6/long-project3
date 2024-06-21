@@ -15,7 +15,7 @@ background-color: #ffe0cc;
 }
 
 [class="st-emotion-cache-6qob1r eczjsme8"] {
-background-color: #ff8533;
+background-color: #ff4d2a;
 }
 </style>
 """
