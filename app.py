@@ -39,6 +39,19 @@ pickle_file = "vectorizer.pkl"
 with open(pickle_file, 'rb') as file:
     loaded_vectorizer = pickle.load(file)
 
+# Custom HTML and CSS to style the selectbox label
+custom_css = """
+<style>
+    .css-1lcbmhc.edgvbvh9 {
+        color: white !important;
+        font-weight: bold !important;
+    }
+</style>
+"""
+
+# Inject custom CSS
+components.html(custom_css, height=0)
+
 st.image('shopeefood.png', use_column_width=True)
 menu = ['Home Page', 'Review Classification', 'Restaurant Information', 'About Us']
 choice = st.sidebar.selectbox('Menu', menu)
