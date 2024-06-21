@@ -39,12 +39,11 @@ pickle_file = "vectorizer.pkl"
 with open(pickle_file, 'rb') as file:
     loaded_vectorizer = pickle.load(file)
 
-
-menu = ['Home Page', 'Classifying Reviews', 'Restaurant Information', 'About Us']
+st.image('shopeefood.png', use_column_width=True)
+menu = ['Home Page', 'Review Classification', 'Restaurant Information', 'About Us']
 choice = st.sidebar.selectbox('Menu', menu)
 
 if choice == 'Home Page':
-    st.image('shopeefood.png', use_column_width=True)
     st.markdown('''
     **ShopeeFood** is an app that provides food delivery services primarily in major cities in Vietnam. It was formerly known as the Now app before being rebranded. ShopeeFood allows users to order food from a variety of restaurants and have it delivered directly to their doorstep. The app offers a user-friendly interface, extensive merchant selections, and is designed to handle group orders efficiently.
 
@@ -76,7 +75,7 @@ if choice == 'Home Page':
     if st.button("Submit"):
         st.success("Feedback sent successfully!")
 
-elif choice == 'Classifying Reviews':
+elif choice == 'Review Classification':
     st.subheader("Sentiment Analysis")
     type = st.radio("", options=["Input one review", "Input multiple reviews", "Upload review file"])
 
