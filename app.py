@@ -203,11 +203,9 @@ elif choice == 'About Us':
     st.write("<br>", unsafe_allow_html=True)
     
     st.markdown('''
-    **LDS0_k294_T2C7** - Project Sentiment Analysis
+    **Project Sentiment Analysis
 
-    - Tran Ha Tuong Vi - tranhatuongvi@gmail.com
     - Nguyen Thanh Long - 26thang6@gmail.com
-    - **Advisor:** Khuat Thuy Phuong - tubirona@gmail.com
     ''')
 
     st.write("<br>", unsafe_allow_html=True)
@@ -224,7 +222,6 @@ elif choice == 'About Us':
     st.image('thankyou.png', use_column_width=True)
 
     st.markdown('''
-    We would like to thank Ho Chi Minh University Computer Science Center, teachers, especially Ms. Khuat Thuy Phuong and friends for helping us complete this project.
 
     Any feedback can be filled out on the Home Page or sent to our email.
 
